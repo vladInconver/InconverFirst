@@ -1,4 +1,5 @@
     <!-- Footer -->
+    <?php /*?>
     <nav class="footer-menu <?php if($post->post_type == "gallery" and !is_single()) { echo""; } elseif(is_page_template('template-contact.php') or is_page_template('template-about.php') or is_404() or is_page_template('template-award.php') or is_page_template('page-home.php')  or is_page_template('template-press.php')){  echo ""; } else { echo "no-fixed";}    ?>">
 
         <!-- Social -->
@@ -44,6 +45,14 @@
 
     </nav>
     <!-- Scripts -->
+    <?php */?>
+            <!-- technology-right -->
+
+        </div>
+        <?php ale_part('right-sidebar' );?>
+    </div>
+</div>
+<!-- technology -->
     <?php wp_footer(); ?>
 </body>
 </html>

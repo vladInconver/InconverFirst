@@ -321,28 +321,16 @@ function aletheme_metaboxes($meta_boxes) {
 
         'fields' => array(
             array(
-                'name' => 'First Description',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr1',
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => 'Second Description',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr2',
+                'name' => 'Text for button',
+                'desc' => 'Please entry text for button',
+                'id'   => $prefix . 'textButton',
                 'type' => 'text',
             ),
             array(
-                'name' => 'File Upload',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'fileupload',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Text Date',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'datefield',
-                'type' => 'wysiwyg',
+                'name' => 'Link for button',
+                'desc' => 'Please entry link for button',
+                'id'   => $prefix . 'linkButton',
+                'type' => 'text',
             ),
         )
     );
@@ -828,9 +816,15 @@ function aletheme_get_images_sizes() {
                 'crop'      => true,
             ),
             array(
-                'name'      => 'post-minibox',
-                'width'     => 500,
-                'height'    => 200,
+                'name'      => 'post-sidebarThumb',
+                'width'     => 89,
+                'height'    => 85,
+                'crop'      => true,
+            ),
+            array(
+                'name'      => 'post-blogThumb',
+                'width'     => 282,
+                'height'    => 132,
                 'crop'      => true,
             ),
         ),

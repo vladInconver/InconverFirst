@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php /*?>
 <h1>It's Index Page</h1>
 <br><br>
     <!-- Content -->
@@ -121,4 +121,16 @@
         </div>
 
     </div>
+    <?php */?>
+    <!-- technology -->
+    <div class="business">
+       
+        <!---->
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php ale_part('postpreview' );?>
+            <?php endwhile; else: ?>
+            <?php ale_part('notfound')?>
+        <?php endif; ?>
+    </div>
+
 <?php get_footer(); ?>

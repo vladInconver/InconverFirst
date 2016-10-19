@@ -76,3 +76,26 @@
     </nav>
 </div>
 <!--head-bottom-->
+<!-- banner -->
+<?php if (is_page_template('page-home.php')) {?>
+	<div class="banner">
+			<div class="container">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				    <h2><?php the_title(); ?></h2>
+				        <?php the_content(); ?>
+				        <?php 
+				        	if (ale_get_meta('linkButton') && ale_get_meta('textButton')) {?>
+				        		<a href="<?php echo ale_get_meta('linkButton')?>"><?php echo ale_get_meta('textButton')?></a>
+				        	 <?php }?>
+						
+				<?php endwhile; endif; ?>
+			</div>
+	</div>
+<?php } else {?>
+	<div class="banner1">
+	</div>
+<?php }?>
+<!-- technology -->
+<div class="technology-1">
+	<div class="container">
+        <div class="col-md-9 technology-left">
