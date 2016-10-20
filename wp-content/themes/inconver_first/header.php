@@ -77,7 +77,9 @@
 </div>
 <!--head-bottom-->
 <!-- banner -->
-<?php if (is_page_template('page-home.php')) {?>
+<?php if (is_page_template('page-home.php')) {
+	$tehnology = 'technology';
+	?>
 	<div class="banner">
 			<div class="container">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -91,11 +93,13 @@
 				<?php endwhile; endif; ?>
 			</div>
 	</div>
-<?php } else {?>
+<?php } else {
+	$tehnology = 'technology1';
+	?>
 	<div class="banner1">
 	</div>
 <?php }?>
 <!-- technology -->
-<div class="technology-1">
+<div class="<?php echo $tehnology;?>">
 	<div class="container">
         <div class="col-md-9 technology-left">

@@ -235,6 +235,27 @@ function aletheme_get_options() {
 						"type" => "checkbox");
 
 
+    $options[] = array( "name" => "Right sidebar",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Image right sidebar",
+                        "desc" => "Image right sidebar.",
+                        "id" => "ale_image_rigt_sid",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Header right sidebar",
+                        "desc" => "Entry please header right sidebar.",
+                        "id" => "ale_head_rigt_sid",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Text right sidebar",
+                        "desc" => "Entry please text right sidebar.",
+                        "id" => "ale_text_rigt_sid",
+                        "std" => "",
+                        "type" => "text");
+
 	
 	$options[] = array( "name" => "Advanced Settings",
 						"type" => "heading");
@@ -825,6 +846,12 @@ function aletheme_get_images_sizes() {
                 'name'      => 'post-blogThumb',
                 'width'     => 282,
                 'height'    => 132,
+                'crop'      => true,
+            ),
+            array(
+                'name'      => 'post-blogImg',
+                'width'     => 656,
+                'height'    => 308,
                 'crop'      => true,
             ),
         ),

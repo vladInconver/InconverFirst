@@ -1,24 +1,35 @@
 <div class="col-md-3 technology-right-1">
                 <div class="blo-top">
                     <div class="tech-btm">
-                    <img src="images/banner1.jpg" class="img-responsive" alt=""/>
+                        <?php if(ale_get_option('image_rigt_sid')){?>
+                            <img src="<?php echo ale_get_option('image_rigt_sid')?>" class="img-responsive" alt=""/>
+                        <?php }?>
                     </div>
                 </div>
                 <div class="blo-top">
                     <div class="tech-btm">
-                    <h4>Sign up to our newsletter</h4>
-                    <p>Pellentesque dui, non felis. Maecenas male</p>
-                        <div class="name">
-                            <form>
-                                <input type="text" placeholder="Email" required="">
-                            </form>
-                        </div>  
-                        <div class="button">
-                            <form>
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
-                            <div class="clearfix"> </div>
+                        <?php if(ale_get_option('head_rigt_sid')){?>
+                            <h4><?php echo ale_get_option('head_rigt_sid')?></h4>
+                        <?php }?>
+                        <?php if(ale_get_option('text_rigt_sid')){?>
+                            <p><?php echo ale_get_option('text_rigt_sid')?></p>
+                        <?php }?>
+                        <form method="post" action="<?php the_permalink();?>">
+                            <?php if (isset($_GET['success'])) : ?>
+                                <p class="success"><?php _e('Thank you for your message!', 'aletheme')?></p>
+                            <?php endif; ?>
+                            <?php if (isset($error) && isset($error['msg'])) : ?>
+                                <p class="error"><?php echo $error['msg']?></p>
+                            <?php endif; ?>
+                            <div class="name">
+                                <input name="contact[email]" type="emai" placeholder="Email (required)" value="<?php echo isset($_POST['contact']['email']) ? $_POST['contact']['email'] : ''?>" required="required" id="contact-form-email" />
+                            </div>
+                            <div class="button">
+                                <input type="submit" class="submit" value="<?php _e('Submit', 'aletheme')?>"/>
+                            </div>
+                            <?php wp_nonce_field() ?>
+                        </form>
+                        <div class="clearfix"> </div>
                     </div>
                 </div>
                 <div class="blo-top1">

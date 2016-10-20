@@ -366,7 +366,7 @@ i.glyphicon.glyphicon-plus{
 }
 /*--technology-left--*/
 /*--technology-right--*/
-.blo-top form input[type="text"] {
+.blo-top .name input {
   width: 100%;
   color: #333333 ! important;
   outline: none;
