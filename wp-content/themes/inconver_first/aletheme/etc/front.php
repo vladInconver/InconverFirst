@@ -43,6 +43,8 @@ function inconver_theme_styles() {
     wp_enqueue_style('aletheme_bootstrap_css');
     wp_register_style( 'aletheme_themeStyle_css', THEME_URL . '/css/style.css', array(), ALETHEME_THEME_VERSION, 'all');
     wp_enqueue_style('aletheme_themeStyle_css');
+    wp_register_style( 'aletheme_themeMain_css', THEME_URL . '/css/main.css', array(), ALETHEME_THEME_VERSION, 'all');
+    wp_enqueue_style('aletheme_themeMain_css');
 }
 add_action( 'wp_enqueue_scripts', 'inconver_theme_styles' );
 

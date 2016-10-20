@@ -49,7 +49,7 @@
             <!-- technology-right -->
 
         </div>
-        <?php ale_part('right-sidebar' );?>
+        <?php get_sidebar(); ?>
     </div>
 </div>
 <!-- technology -->

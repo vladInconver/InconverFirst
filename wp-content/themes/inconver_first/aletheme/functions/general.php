@@ -1218,7 +1218,9 @@ function ale_is_blog () {
 	$posttype = get_post_type($post);
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ($posttype == 'post')) ? true : false ;
 }
-
+/**
+* Регистрация сайтбаров
+*/
 if ( function_exists('register_sidebar') ) {
 
         register_sidebar(array(
@@ -1227,8 +1229,8 @@ if ( function_exists('register_sidebar') ) {
             'description' => 'Appears as the left sidebar on Blog pages',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
-            'before_title' => '<p class="caption">',
-            'after_title' => '</p><div class="line"></div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
         ));
 
 }
