@@ -40,7 +40,6 @@
     <div class="blo-top1">
         <div class="tech-btm">
             <h4>Top stories of the week </h4> 
-           
             <?php 
                 $recent_posts = wp_get_recent_posts();
                 foreach( $recent_posts as $recent ){
