@@ -31,7 +31,7 @@
 							<?php comments_number('пока нет комментариев', '1 комменатрий', '% комментариев'); ?> 
 						</a>
 					</li>
-					<li><i class="glyphicon glyphicon-heart"> </i><a class="admin" href="#">5 favourites </a></li>
+					<li><?php wpfp_link(); ?></li>
 					<li>
 						<i class="glyphicon glyphicon-eye-open"> </i>
 						<?php echo ale_getPostViews(get_the_ID());?> 

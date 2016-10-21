@@ -559,12 +559,49 @@ html[xmlns] .slides {
   margin-right: 0.3em;
   margin-top: 0px;
   vertical-align: middle;
+  direction: ltr;
 }
 .wpfp_users_favorites_widget_view li a {
+  direction: ltr;
   color: #000;
   transition: 0.5s all;
   vertical-align: middle;
 }
 .wpfp_users_favorites_widget_view li a:hover {
   color: #fa4b2a;
+}
+.footer_pagination {
+  color: #000000;
+}
+.footer_pagination a {
+  display: inline-block;
+  padding: 25px 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: 3px solid #fece14;
+  color: #000000;
+}
+.footer_pagination a:hover {
+  border-color: #000000;
+}
+.footer_pagination .prev_pagination_link a,
+.footer_pagination .next_pagination_link a {
+  border: none;
+  cursor: pointer;
+  color: #61616;
+}
+.footer_pagination .prev_pagination_link a i,
+.footer_pagination .next_pagination_link a i {
+  color: #61616 !important;
+}
+.footer_pagination .prev_pagination_link a:hover,
+.footer_pagination .next_pagination_link a:hover {
+  color: #000000;
+}
+.footer_pagination .current {
+  display: inline-block;
+  padding: 25px 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: 3px solid #000000;
 }

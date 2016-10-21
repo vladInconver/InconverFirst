@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php /**?>
     <!-- Content -->
     <div class="blog-center-align">
 
@@ -13,10 +14,7 @@
     <!-- Blog Content -->
     <div class="blog-single">
 
-        <!-- Right Menu -->
-        <div class="right-side">
-            <?php get_sidebar(); ?>
-        </div>
+    
 
         <!-- Left Content -->
         <div class="left-side">
@@ -59,5 +57,25 @@
         <div class="right"><?php if(get_next_post_link()){ ?><span class="right"></span><?php } ?> <?php next_post_link('%link'); ?>  </div>
     </div>
 
+    </div>
+    <?php **/?>
+    <div class="business">
+        <div class=" blog-grid2">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <?php ale_setPostViews(get_the_ID()); ?>
+                    <?php echo get_the_post_thumbnail($post->ID,'post-blogImg');?>
+                    <div class="blog-text">
+                        <h5><?php the_title(); ?></h5>
+                        <div class="text">
+                            <?php ale_part('posthead');?>
+                            <?php ale_part('postfull');?>
+                            <div class="cf"></div>
+                            <?php ale_part('postfooter');?>
+                        </div>
+            <?php endwhile; else: ?>
+                <?php ale_part('notfound')?>
+            <?php endif; ?>          
+                    </div>
+        </div>
     </div>
 <?php get_footer(); ?>

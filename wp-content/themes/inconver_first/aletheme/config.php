@@ -257,8 +257,18 @@ function aletheme_get_options() {
                         "type" => "text");
 
 	
-	$options[] = array( "name" => "Advanced Settings",
-						"type" => "heading");
+    $options[] = array( "name" => "Footer Settings",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Footer copyright",//main
+                        "desc" => "Insert the footer copyright",
+                        "id" => "ale_footercopyright",
+                        "std" => "",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "Advanced Settings",
+                        "type" => "heading");
 
 	
 	$options[] = array( "name" => "Google Analytics",

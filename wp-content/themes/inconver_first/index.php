@@ -131,6 +131,7 @@
             <?php endwhile; else: ?>
             <?php ale_part('notfound')?>
         <?php endif; ?>
+        <!---->
     </div>
 
 <?php get_footer(); ?>
